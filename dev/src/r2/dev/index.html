@@ -2,7 +2,7 @@
 <html>
 <head lang="en">
   <meta charset="UTF-8">
-  <title>gh3 next gen</title>
+  <title>R2</title>
   <link rel="icon" sizes="196x196" href="html5.png">
   <style>
     body { background:#ffffff; font-size: 13px; color: #666666; font-family: Arial, helvetica, sans-serif;}
@@ -13,17 +13,14 @@
 
 <body style="padding: 20px">
 
-  <h1>Gh3.next</h1>
-  <h2>Open developer tools (console) to see results</h2>
-
-  <script src="src/traceur/traceur.min.js"></script>
+  <script src="bower_components/traceur/traceur.min.js"></script>
   <!--
   <script>
     traceur.options.experimental = true;
   </script>
   -->
   <script>
-    System.import('./main');
+    System.import('main');
   </script>
 </body>
 </html>

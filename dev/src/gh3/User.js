@@ -1,6 +1,6 @@
 //https://developer.github.com/v3/users/
 
-import r2 from './dependencies/r2/r2';
+import r2 from '../r2/r2';
 
 class User   {
   constructor (properties) {
