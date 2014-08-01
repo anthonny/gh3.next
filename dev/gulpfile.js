@@ -11,7 +11,7 @@ gulp.task('dist', function() {
 
   fs.unlink('../*.js', function (err) {
     if (err) { console.log(err.message); };
-    gulp.src('src/gh3/*.js').pipe(gulp.dest('../'));
+    gulp.src('src/*.js').pipe(gulp.dest('../'));
   });
 
 });

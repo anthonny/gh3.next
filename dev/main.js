@@ -1,4 +1,4 @@
-import gh3 from './src/gh3/gh3';
+import gh3 from './src/gh3';
 
 console.log("start")
 
