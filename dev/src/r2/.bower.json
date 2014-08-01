@@ -1,11 +1,11 @@
 {
   "name": "r2",
   "homepage": "https://github.com/k33g/r2",
-  "_release": "ea2d34b15d",
+  "_release": "15ae1eb9c9",
   "_resolution": {
     "type": "branch",
     "branch": "master",
-    "commit": "ea2d34b15da995ef99eee022c9fdaee3a8af656a"
+    "commit": "15ae1eb9c98079eb3bd75ecfde6ac0bc30940780"
   },
   "_source": "git://github.com/k33g/r2.git",
   "_target": "master",
