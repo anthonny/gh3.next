@@ -1,7 +1,0 @@
-{
-  "name": "r2",
-  "version": "0.0.0",
-  "dependencies": {
-    "traceur": "k33g/component-traceur#master"
-  }
-}
