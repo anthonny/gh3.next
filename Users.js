@@ -1,7 +1,7 @@
 //https://developer.github.com/v3/search/#search-users
 //https://api.github.com/search/users?q=tom+repos:%3E42+followers:%3E1000
 
-import r2 from './r2/r2';
+import r2 from './r2.dependency';
 import User from './User';
 
 class Users   {

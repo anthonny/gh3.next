@@ -1,6 +1,6 @@
 //https://developer.github.com/v3/repos/#get
 //GET /repos/:owner/:repo
-import r2 from './r2/r2';
+import r2 from './r2.dependency';
 import User from './User';
 
 class Repository   {
