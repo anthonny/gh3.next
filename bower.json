@@ -1,0 +1,8 @@
+{
+  "name": "gh3.next",
+  "version": "0.0.1",
+  "main": "./gh3.js",
+  "ignore": [
+    "dev"
+  ]
+}
