@@ -1,7 +1,7 @@
 //https://developer.github.com/v3/repos/#get
 //GET /repos/:owner/:repo
-import r2 from './r2.dependency';
-import User from './User';
+import Request from './Request.js';
+import User from './User.js';
 
 class Repository   {
   constructor (properties) {
@@ -10,7 +10,7 @@ class Repository   {
   }
 
   fetch () {
-    return new r2.Request(this.url).jsonp().then((properties) => {
+    return new Request(this.url).jsonp().then((properties) => {
       Object.assign(this, properties.data);
       this.owner = new User(this.owner)
     })

@@ -1,9 +1,0 @@
-{
-  "name": "gh3.next",
-  "description": "gh3.next",
-  "version": "0.0.0",
-  "devDependencies": {
-    "gulp": "^3.8.6",
-    "gulp-run": "^1.6.2"
-  }
-}

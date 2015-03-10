@@ -1,8 +1,0 @@
-{
-  "name": "gh3.next",
-  "version": "0.0.0",
-  "dependencies": {
-    "traceur": "k33g/component-traceur#master",
-    "r2": "k33g/r2#master"
-  }
-}

@@ -1,0 +1,7 @@
+{
+  "name": "gh3.next.samples",
+  "version": "0.0.0",
+  "dependencies": {
+    "traceur": "~0.0.86"
+  }
+}

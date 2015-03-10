@@ -1,15 +1,34 @@
 //https://developer.github.com/v3/users/
 
-import r2 from './r2.dependency';
+import Request from './Request.js';
 
 class User   {
-  constructor (properties) {
-    Object.assign(this, properties);
-    this.url = "https://api.github.com/users/" + this.login;
+  constructor (fields={}) {
+    this.fields = fields;
+    this.fields.url = "https://api.github.com/users/" + this.fields.login;
+  }
+
+  get (fieldName) {
+    return this.fields[fieldName];
+  }
+  set (fieldName, value) {
+    this.fields[fieldName] = value;
+    return this;
+  }
+
+  properties() {
+    var properties = [];
+    for(let member in this.fields) {
+      properties.push({name:member, value:this.fields[member]});
+    }
+    return properties;
   }
 
   fetch () {
-    return new r2.Request(this.url).jsonp().then((properties) => { Object.assign(this, properties.data); })
+    return new Request(this.fields.url).jsonp().then((properties) => {
+      Object.assign(this.fields, properties.data);
+      return this;
+    });
   }
 
   fetchRepositories () {
@@ -20,12 +39,3 @@ class User   {
 }
 
 export default User;
-
-/*
-window.k33g = new User({login:"k33g"});
-k33g.fetch().then((data) => {
-  console.log(k33g)
-}).catch((error) => {
-  console.log(error);
-});
- */
