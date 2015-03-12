@@ -6,13 +6,15 @@ import User from './User.js';
 class Repository   {
   constructor (properties) {
     Object.assign(this, properties);
-    this.url = "https://api.github.com/repos/" + this.owner.login + "/" + this.name;
+    this.url = "https://api.github.com/repos/" + this.owner.get("login") + "/" + this.name;
+
   }
 
   fetch () {
     return new Request(this.url).jsonp().then((properties) => {
       Object.assign(this, properties.data);
-      this.owner = new User(this.owner)
+      this.owner = new User(this.owner);
+      return this;
     })
   }
 
@@ -20,12 +22,3 @@ class Repository   {
 
 export default Repository;
 
-/*
-window.gh3 = new Repository({owner: new User({login:"k33g"}), name:"gh3"});
-
-gh3.fetch().then((data) => {
-  console.log(gh3);
-}).catch((error) => {
-  console.log(error);
-});
-*/

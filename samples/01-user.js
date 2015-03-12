@@ -5,7 +5,7 @@
 import Gh3 from '../gh3.next.js';
 
 let k33g = new Gh3.User({login:"k33g"})
-  , userInformations = Gh3.$("#user");
+  , userInformations = Gh3.q("#user");
 
 k33g.fetch().then((user) => {
 
