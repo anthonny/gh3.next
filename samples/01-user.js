@@ -21,7 +21,7 @@ k33g.fetch().then((user) => {
     ).join("")
   }</ul>`;
 
-  userInformations.innerHTML = html;
+  userInformations.html(html);
 
 
 }).catch((error) => {

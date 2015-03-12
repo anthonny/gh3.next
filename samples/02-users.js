@@ -5,17 +5,14 @@
 import Gh3 from '../gh3.next.js';
 
 let gitHubUsers = new Gh3.Users()
-  , usersInformations = Gh3.$("#users");
+  , usersInformations = Gh3.q("#users");
 
-gitHubUsers.search("k33g").then((users) => {
-  console.log("gitHubUsers",
-    users,
-    gitHubUsers.foundUsers()
-  );
+gitHubUsers.search("k33").then((users) => {
 
+  console.log("gitHubUsers", users); // or gitHubUsers.foundUsers()
 
   let html = `<ul>${
-    gitHubUsers.foundUsers().map(
+    users.map(
       (user) => `
           <li>
             <b>${user.get("login")}</b> - ${user.get("repos_url")}
@@ -24,7 +21,7 @@ gitHubUsers.search("k33g").then((users) => {
     ).join("")
    }</ul>`;
 
-  usersInformations.innerHTML = html;
+  usersInformations.html(html);
 
 }).catch((error) => {
   console.log(error);
